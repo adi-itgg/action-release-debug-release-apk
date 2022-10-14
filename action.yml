@@ -1,4 +1,4 @@
-name: "Debug and Release APK Publisher"
+name: "Debug and Release APK Publisher with mapping"
 branding:
   icon: "package"
   color: "blue"
@@ -9,7 +9,7 @@ inputs:
     required: true
     description: "Github secret token to allow automated publishing of APK to release."
   REPO_BRANCH:
-    required: true
+    required: false
     description: "Github repository branch name."
 runs:
   using: "docker"
