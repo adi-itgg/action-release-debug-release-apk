@@ -1,7 +1,7 @@
 FROM debian:10.1
 
-LABEL "version"="1.0.1"
-LABEL "com.github.actions.name"="Debug and Release APK Publisher"
+LABEL "version"="1.1.0"
+LABEL "com.github.actions.name"="Debug and Release APK Publisher with mapping"
 LABEL "com.github.actions.description"="Build & Publish Debug and Release APK on Github"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
