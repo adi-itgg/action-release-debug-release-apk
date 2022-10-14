@@ -12,6 +12,7 @@ LABEL "maintainer"="ShaunLWM"
 RUN apt update \
 	&& apt -y upgrade \
 	&& apt install -y hub \
+	&& apt install zip \
 	&& apt autoremove \
 	&& apt autoclean \
 	&& apt clean
