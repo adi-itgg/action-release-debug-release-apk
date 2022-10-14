@@ -3,6 +3,7 @@
 mkdir -p ./${APP_FOLDER}/build/outputs/apk/upload
 cp ./${APP_FOLDER}/build/outputs/apk/debug/*-debug.apk ./${APP_FOLDER}/build/outputs/apk/upload/
 cp ./${APP_FOLDER}/build/outputs/apk/release/*.apk ./${APP_FOLDER}/build/outputs/apk/upload/
+cp ./${APP_FOLDER}/build/outputs/mapping/release/mapping.txt ./${APP_FOLDER}/build/outputs/apk/upload/
 cp ./${APP_FOLDER}/release/*.apk ./${APP_FOLDER}/build/outputs/apk/upload/
 
 hub checkout ${${REPO_BRANCH}:-master}
