@@ -14,34 +14,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-name: Build & Publish Debug and Release APK
-
-on:
- push:
-  branches:
-   - master
-   
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-    - name: Make Gradle executable
-      run: chmod +x ./gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
-    - name: Build Release APK
-      run: ./gradlew assembleRelease
-    - name: Releasing using Hub
-      uses: adi-itgg/action-release-debug-release-apk@master
-      env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-       APP_FOLDER: app
-       RELEASE_TITLE: Build
