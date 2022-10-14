@@ -9,7 +9,7 @@ inputs:
     required: true
     description: "Github secret token to allow automated publishing of APK to release."
   REPO_BRANCH:
-    required: false
+    required: true
     description: "Github repository branch name."
 runs:
   using: "docker"
