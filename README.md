@@ -1,4 +1,4 @@
-# action-release-debugapk
+# action-release-debug-release-apk
 
 ![screenshot](screenshot.png)
 
