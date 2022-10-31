@@ -2,6 +2,8 @@
 
 mkdir -p ./${APP_FOLDER}/build/outputs/apk/upload
 
+chmod +x gradlew
+
 ./gradlew assembleRelease --stacktrace
 
 cp ./${APP_FOLDER}/release/*.apk ./${APP_FOLDER}/build/outputs/apk/upload/
